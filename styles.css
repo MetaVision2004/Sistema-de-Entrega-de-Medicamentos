@@ -1,0 +1,172 @@
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border: 1px solid #ccc;
+        }
+
+        .header {
+            background-color: #4a90e2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-field {
+            margin-bottom: 10px;
+        }
+
+        .input-field label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-field input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 50px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        .btn-primary {
+            background-color: #4a90e2;
+            color: white;
+            border-radius: 50px;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            color: white;
+            border-radius: 20px;
+        
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            color: white;
+            border-radius: 50px;
+        }
+
+        .inventory {
+            background-color: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 20px;
+        }
+
+        .inventory-item {
+            margin-bottom: 10px;
+        }
+
+        .patient-list {
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 20px;
+        }
+
+        .patient-item {
+            background-color: #f8f9fa;
+            padding: 10px;
+            margin-bottom: 8px;
+            border-radius: 20px;
+        }
+
+        .patient-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+            border-radius: 50px;
+        }
+
+        .badge-hipotension {
+            background-color: #17a2b8;
+        }
+
+        .badge-normal {
+            background-color: #28a745;
+        }
+
+        .badge-pre-hta {
+            background-color: #ffc107;
+            color: #333;
+        }
+
+        .badge-hta {
+            background-color: #dc3545;
+        }
+
+        .results {
+            background-color: #f8f9fa;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 20px;
+            
+        }
+
+        .result-item {
+            padding: 10px;
+            margin-bottom: 8px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+        }
+
+        .alert {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid;
+        }
+
+        .alert-warning {
+            background-color: #fff3cd;
+            border-color: #ffc107;
+            color: #856404;
+        }
+
+        .alert-info {
+            background-color: #d1ecf1;
+            border-color: #17a2b8;
+            color: #0c5460;
+        }
+
+        .hidden {
+            display: none;
+        }
