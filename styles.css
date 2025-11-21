@@ -1,4 +1,4 @@
-body {
+ body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             padding: 20px;
@@ -51,7 +51,6 @@ body {
             width: 100%;
             padding: 8px;
             border: 1px solid #ccc;
-            border-radius: 50px;
         }
 
         .btn {
@@ -64,27 +63,22 @@ body {
         .btn-primary {
             background-color: #4a90e2;
             color: white;
-            border-radius: 50px;
         }
 
         .btn-secondary {
             background-color: #6c757d;
             color: white;
-            border-radius: 20px;
-        
         }
 
         .btn-success {
             background-color: #28a745;
             color: white;
-            border-radius: 50px;
         }
 
         .inventory {
             background-color: #f8f9fa;
             padding: 15px;
             margin-bottom: 15px;
-            border-radius: 20px;
         }
 
         .inventory-item {
@@ -97,14 +91,12 @@ body {
             border: 1px solid #ccc;
             padding: 10px;
             margin-bottom: 15px;
-            border-radius: 20px;
         }
 
         .patient-item {
             background-color: #f8f9fa;
             padding: 10px;
             margin-bottom: 8px;
-            border-radius: 20px;
         }
 
         .patient-badge {
@@ -113,7 +105,6 @@ body {
             font-size: 12px;
             font-weight: bold;
             color: white;
-            border-radius: 50px;
         }
 
         .badge-hipotension {
@@ -137,8 +128,6 @@ body {
             background-color: #f8f9fa;
             padding: 15px;
             margin-top: 15px;
-            border-radius: 20px;
-            
         }
 
         .result-item {
@@ -146,7 +135,6 @@ body {
             margin-bottom: 8px;
             background-color: white;
             border: 1px solid #ddd;
-            border-radius: 50px;
         }
 
         .alert {
@@ -165,6 +153,12 @@ body {
             background-color: #d1ecf1;
             border-color: #17a2b8;
             color: #0c5460;
+        }
+
+        .alert-danger {
+            background-color: #f8d7da;
+            border-color: #dc3545;
+            color: #721c24;
         }
 
         .hidden {

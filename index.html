@@ -12,6 +12,7 @@
             <h1>Sistema de Entrega de Medicamentos</h1>
             <p>Ministerio de Salud - Control de Presion Arterial</p>
         </div>
+
         <div class="content">
             <div class="section" id="inventorySection">
                 <div class="section-title">1. Inventario Inicial de Medicamentos</div>
@@ -27,6 +28,7 @@
                 </div>
                 <button class="btn btn-primary" onclick="iniciarInventario()">Iniciar Sistema</button>
             </div>
+
             <div class="section hidden" id="patientSection">
                 <div class="section-title">2. Registro de Pacientes</div>
                 
@@ -40,6 +42,7 @@
                         <p id="med2Display">0</p>
                     </div>
                 </div>
+
                 <div class="input-group">
                     <div class="input-field">
                         <label>Presion Sistolica</label>
@@ -50,18 +53,20 @@
                         <input type="number" id="diastolica" placeholder="Ej: 80">
                     </div>
                 </div>
+
                 <button class="btn btn-primary" onclick="agregarPaciente()">Agregar Paciente</button>
                 <button class="btn btn-success" onclick="finalizarAtencion()">Finalizar Atencion</button>
+
                 <div id="alertContainer"></div>
-                <br>
+
                 <div class="patient-list" id="patientList">
                     <p style="text-align: center; color: #999;">No hay pacientes registrados</p>
                 </div>
             </div>
+
             <div class="section hidden" id="resultsSection">
                 <div class="section-title">3. Resultados Finales</div>
                 <div class="results" id="resultsContainer"></div>
-                <br>
                 <button class="btn btn-secondary" onclick="reiniciar()">Nuevo Proceso</button>
             </div>
         </div>

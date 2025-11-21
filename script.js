@@ -36,31 +36,31 @@ let inventarioMed1 = 0;
         function determinarCategoria(sistolica, diastolica) {
             // Validar rangos
             if (sistolica < 69 && diastolica < 48) {
-                return { categoria: 'hipotension', medicamento: 2, dosis: 6 };
+                return { categoria: 'hipotension', medicamento: 2, dosis: 6, valido: true };
             }
             if (sistolica >= 69 && sistolica < 98 && diastolica >= 48 && diastolica < 66) {
-                return { categoria: 'Optima', medicamento: 0, dosis: 0 };
+                return { categoria: 'Optima', medicamento: 0, dosis: 0, valido: true };
             }
             if (sistolica >= 98 && sistolica < 143 && diastolica >= 66 && diastolica < 92) {
-                return { categoria: 'Comun', medicamento: 0, dosis: 0 };
+                return { categoria: 'Comun', medicamento: 0, dosis: 0, valido: true };
             }
             if (sistolica >= 143 && sistolica < 177 && diastolica >= 92 && diastolica < 124) {
-                return { categoria: 'Pre HTA', medicamento: 1, dosis: 6 };
+                return { categoria: 'Pre HTA', medicamento: 1, dosis: 6, valido: true };
             }
             if (sistolica >= 177 && sistolica < 198 && diastolica >= 124 && diastolica < 142) {
-                return { categoria: 'HTAG1', medicamento: 1, dosis: 10 };
+                return { categoria: 'HTAG1', medicamento: 1, dosis: 10, valido: true };
             }
             if (sistolica >= 198 && sistolica < 246 && diastolica >= 142 && diastolica < 169) {
-                return { categoria: 'HTAG2', medicamento: 1, dosis: 18 };
+                return { categoria: 'HTAG2', medicamento: 1, dosis: 18, valido: true };
             }
             if (sistolica >= 246 && diastolica >= 169) {
-                return { categoria: 'HTAG3', medicamento: 1, dosis: 35 };
+                return { categoria: 'HTAG3', medicamento: 1, dosis: 35, valido: true };
             }
             if (sistolica >= 162 && diastolica < 86) {
-                return { categoria: 'HTASS', medicamento: 1, dosis: 17 };
+                return { categoria: 'HTASS', medicamento: 1, dosis: 17, valido: true };
             }
             
-            return { categoria: 'Sin categoria', medicamento: 0, dosis: 0 };
+            return { categoria: 'Sin categoria', medicamento: 0, dosis: 0, valido: false };
         }
 
         function agregarPaciente() {
@@ -78,6 +78,44 @@ let inventarioMed1 = 0;
             }
 
             const resultado = determinarCategoria(sistolica, diastolica);
+            
+            // Si los valores están fuera de rango, mostrar alerta de advertencia
+            if (!resultado.valido) {
+                const alertHTML = `
+                    <div class="alert alert-danger">
+                        <strong>⚠️ Valores Fuera de Rango</strong><br>
+                        ⚠️ La combinacion de presiones esta FUERA DE RANGO segun la tabla de categorias.<br><br>
+                        <strong>Sistolica:</strong> ${sistolica} mmHg<br>
+                        <strong>Diastolica:</strong> ${diastolica} mmHg<br><br>
+                        Esta combinacion no corresponde a ninguna categoria valida en la tabla.
+                    </div>
+                `;
+                document.getElementById('alertContainer').innerHTML = alertHTML;
+                
+                // Registrar el paciente pero sin entregar medicamento
+                pacientesAtendidos++;
+                
+                pacientes.push({
+                    numero: pacientesAtendidos,
+                    sistolica,
+                    diastolica,
+                    categoria: resultado.categoria,
+                    medicamento: 0,
+                    dosis: 0,
+                    entregado: false,
+                    mensaje: 'Valores fuera de rango - No se entrega medicamento'
+                });
+
+                actualizarListaPacientes();
+                
+                // Limpiar campos
+                sistolicaInput.value = '';
+                diastolicaInput.value = '';
+                sistolicaInput.focus();
+                
+                return;
+            }
+
             let entregado = false;
             let mensaje = '';
 
