@@ -36,11 +36,12 @@
 
         .input-group {
             margin-bottom: 15px;
-            border-radius: 50px;
+            
         }
 
         .input-field {
             margin-bottom: 10px;
+            border-radius: 20px;
         }
 
         .input-field label {
@@ -52,6 +53,7 @@
             width: 100%;
             padding: 8px;
             border: 1px solid #ccc;
+            border-radius: 50px;
         }
 
         .btn {
@@ -69,11 +71,13 @@
         .btn-secondary {
             background-color: #6c757d;
             color: white;
+            border-radius: 50px;
         }
 
         .btn-success {
             background-color: #28a745;
             color: white;
+            border-radius: 50px;
         }
 
         .inventory {
