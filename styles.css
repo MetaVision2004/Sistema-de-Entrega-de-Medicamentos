@@ -61,24 +61,29 @@
             border: none;
             cursor: pointer;
             margin-right: 5px;
+            border-radius: 50px;
+            font-weight: bold;
         }
 
         .btn-primary {
             background-color: #4a90e2;
             color: white;
             border-radius: 50px;
+            font-weight: bold;
         }
 
         .btn-secondary {
             background-color: #6c757d;
             color: white;
             border-radius: 50px;
+            font-weight: bold;
         }
 
         .btn-success {
             background-color: #28a745;
             color: white;
             border-radius: 50px;
+            font-weight: bold;
         }
 
         .inventory {
