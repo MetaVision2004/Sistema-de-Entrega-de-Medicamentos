@@ -90,6 +90,7 @@
             background-color: #f8f9fa;
             padding: 15px;
             margin-bottom: 15px;
+            border-radius: 20px;
         }
 
         .inventory-item {
@@ -102,12 +103,14 @@
             border: 1px solid #ccc;
             padding: 10px;
             margin-bottom: 15px;
+            border-radius: 20px;
         }
 
         .patient-item {
             background-color: #f8f9fa;
             padding: 10px;
             margin-bottom: 8px;
+            border-radius: 20px;
         }
 
         .patient-badge {
