@@ -84,7 +84,7 @@ let inventarioMed1 = 0;
                 const alertHTML = `
                     <div class="alert alert-danger">
                         <strong>⚠️ Valores Fuera de Rango</strong><br>
-                        ⚠️ La combinacion de presiones esta FUERA DE RANGO segun la tabla de categorias.<br><br>
+                        La combinacion de presiones esta <b>FUERA DE RANGO</b> segun la tabla de categorias.<br><br>
                         <strong>Sistolica:</strong> ${sistolica} mmHg<br>
                         <strong>Diastolica:</strong> ${diastolica} mmHg<br><br>
                         Esta combinacion no corresponde a ninguna categoria valida en la tabla.
